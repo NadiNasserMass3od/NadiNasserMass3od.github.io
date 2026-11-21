@@ -98,10 +98,20 @@ a { color: var(--accent); text-decoration: none; }
   padding: 120px 24px 60px;
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(rgba(10, 17, 32, 0.86), rgba(10, 17, 32, 0.94)),
-    url("cover.jpg") center 30% / cover no-repeat;
+  background: radial-gradient(ellipse 90% 65% at 65% 25%, #10203a 0%, #0a1120 75%);
 }
+
+/* full ND logo watermark behind the hero content */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("logo-mark.png") center 45% / min(76vw, 500px) no-repeat;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.hero > * { position: relative; z-index: 1; }
 
 .hero-inner { max-width: 620px; }
 
