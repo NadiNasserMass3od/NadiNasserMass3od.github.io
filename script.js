@@ -40,3 +40,35 @@ const revealCheck = () => revealEls.forEach(el => {
 window.addEventListener('scroll', revealCheck, { passive: true });
 window.addEventListener('load', revealCheck);
 revealCheck();
+
+// Looping typewriter: type a phrase, pause, erase, next phrase
+const typer = document.getElementById('typer');
+if (typer) {
+  const phrases = [
+    "// I'm a Flutter developer",
+    "// I'm an embedded engineer",
+    "// I build & ship real apps"
+  ];
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    typer.textContent = phrases[0];
+  } else {
+    let pi = 0, ci = 0, deleting = false;
+    typer.textContent = '';
+    const tick = () => {
+      const p = phrases[pi];
+      ci += deleting ? -1 : 1;
+      typer.textContent = p.slice(0, ci);
+      let delay = deleting ? 30 : 58;
+      if (!deleting && ci === p.length) {
+        deleting = true;
+        delay = 1800;
+      } else if (deleting && ci === 0) {
+        deleting = false;
+        pi = (pi + 1) % phrases.length;
+        delay = 450;
+      }
+      setTimeout(tick, delay);
+    };
+    setTimeout(tick, 500);
+  }
+}
