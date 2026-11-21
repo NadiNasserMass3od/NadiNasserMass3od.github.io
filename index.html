@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nadi Nasser | Flutter &amp; Embedded Systems Engineer</title>
+<meta name="description" content="Portfolio of Nadi Nasser, Flutter and embedded systems developer. Published apps on Google Play, production web apps, and PIC/AVR embedded projects.">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#top"><img src="images/logo.png" alt="ND logo"></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-cta" href="nadi-nasser-flutter-cv.pdf" download>Download CV</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-hello">// Hello, I'm</p>
+      <h1 class="hero-name">Nadi Nasser</h1>
+      <h2 class="hero-role">Flutter <span class="amp">&amp;</span> Embedded Systems Engineer</h2>
+      <p class="hero-line">I build and ship real apps: a finance app live on Google Play, web apps used daily by 3 churches, and embedded firmware that moves actual hardware.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="nadi-nasser-flutter-cv.pdf" download>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Flutter CV
+        </a>
+        <a class="btn btn-ghost" href="nadi-nasser-embedded-cv.pdf" download>Embedded CV</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>1</strong><span>app on Google Play</span></div>
+        <div class="stat"><strong>3</strong><span>churches using my apps daily</span></div>
+        <div class="stat"><strong>~2</strong><span>years of hands-on Flutter</span></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="images/profile.jpg" alt="Nadi Nasser" width="280" height="280">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h3 class="section-title"><span class="num">01.</span> About me</h3>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a self-driven developer from Egypt with about two years of hands-on Flutter experience, building and shipping my own apps end to end: design, code, release and maintenance. My work isn't tutorial projects; it's software that real people use every day.</p>
+        <p>On the hardware side, my Electrical Engineering degree (Assiut University, 2025) came with real firmware: PIC and AVR microcontrollers, motor drivers, UART and USB HID communication, and a graduation project that tracks objects with a motorized camera.</p>
+        <p>I'm looking for a junior Flutter or embedded role where I can ship, learn from a team, and take ownership. My code and apps are public, so I'd rather show you than tell you.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-row"><span>Based in</span><strong>Assiut, Egypt · remote-ready</strong></div>
+        <div class="about-card-row"><span>Degree</span><strong>B.Sc. Electrical Engineering, 2025</strong></div>
+        <div class="about-card-row"><span>Focus</span><strong>Flutter &amp; Dart · Embedded C</strong></div>
+        <div class="about-card-row"><span>Training</span><strong>ITI Embedded Systems, 2024</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <h3 class="section-title"><span class="num">02.</span> Things I've built</h3>
+
+    <div class="cards">
+
+      <article class="card featured">
+        <div class="card-top">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <span class="badge">Live on Google Play</span>
+        </div>
+        <h4>Hesabaty · Personal Finance App</h4>
+        <p>Arabic Flutter app for income, expense and budget tracking, published on Google Play. Fully offline, financial dashboard, search and filters, monthly summaries, light/dark/auto themes. I handled the full release: signing, versioning and store submission.</p>
+        <ul class="tags"><li>Flutter</li><li>Dart</li><li>Offline-first</li><li>Google Play</li></ul>
+        <div class="card-links">
+          <a href="https://play.google.com/store/apps/details?id=com.nadi.hesabaty" target="_blank" rel="noopener">View on Google Play ↗</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="badge badge-live">Used daily</span>
+        </div>
+        <h4>Church Services Schedule · Live PWA</h4>
+        <p>Installable Arabic RTL web app with weekly timetables, filters and activity times, used daily by 3 churches. Maintained in production with real user feedback, bug fixes and improvements.</p>
+        <ul class="tags"><li>Flutter web</li><li>PWA</li><li>Arabic RTL</li></ul>
+        <div class="card-links">
+          <a href="https://archangel-raphael.pages.dev" target="_blank" rel="noopener">Open the app ↗</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+        </div>
+        <h4>Weather Forecast App</h4>
+        <p>WeatherAPI integration with Dio, all state managed through Bloc/Cubit with proper loading, error and empty states. Current conditions and a 3-day forecast.</p>
+        <ul class="tags"><li>Flutter</li><li>Bloc/Cubit</li><li>REST API</li></ul>
+        <div class="card-links">
+          <a href="https://github.com/NadiNasserMass3od/weather" target="_blank" rel="noopener">Source on GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h4>NadFly · Social App</h4>
+        <p>Social media app with Firebase Authentication and Cloud Firestore: feeds, image posts, likes, comments, profiles and follow/unfollow, with Provider and Cloudinary.</p>
+        <ul class="tags"><li>Flutter</li><li>Firebase</li><li>Provider</li></ul>
+        <div class="card-links">
+          <a href="https://github.com/NadiNasserMass3od/social" target="_blank" rel="noopener">Source on GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          <span class="badge badge-hw">Graduation project</span>
+        </div>
+        <h4>Object Tracking System</h4>
+        <p>Motorized camera-tracking system: Embedded C firmware on a PIC18F4550 with timer interrupts and PWM driving 2 motor axes, a custom MOSFET driver board, and USB HID host communication with 16-byte packets.</p>
+        <ul class="tags"><li>Embedded C</li><li>PIC18F4550</li><li>USB HID</li><li>PWM</li></ul>
+        <div class="card-links">
+          <a href="https://github.com/NadiNasserMass3od/Object-Tracking" target="_blank" rel="noopener">Source on GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3"/><path d="M12 19v3"/><path d="M4.9 4.9l2.1 2.1"/><path d="M17 17l2.1 2.1"/><path d="M2 12h3"/><path d="M19 12h3"/><path d="M4.9 19.1L7 17"/><path d="M17 7l2.1-2.1"/></svg>
+        </div>
+        <h4>Mine Detector Robot</h4>
+        <p>AVR-based robot prototype integrating ultrasonic sensors, DC motors, a servo, LCD and buzzer for automatic scanning and stop/alert behavior, with UART/USART communication and manual + automatic control modes.</p>
+        <ul class="tags"><li>AVR</li><li>UART/USART</li><li>Embedded C</li></ul>
+        <div class="card-links">
+          <a href="https://github.com/NadiNasserMass3od/Mine-Detectors" target="_blank" rel="noopener">Source on GitHub ↗</a>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="more">More on my GitHub: a Todo app with a Google Sheets backend, Sunday-school attendance tools, a hymn-book organizer, C++ systems and PIC reference docs. <a href="https://github.com/NadiNasserMass3od" target="_blank" rel="noopener">Browse everything ↗</a></p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <h3 class="section-title"><span class="num">03.</span> Skills</h3>
+    <div class="skills-grid">
+      <div class="skill-col">
+        <h5>Flutter &amp; Dart</h5>
+        <ul>
+          <li>Bloc / Cubit, Provider, StreamBuilder</li>
+          <li>REST APIs with Dio, error/loading states</li>
+          <li>Firebase Auth, Cloud Firestore</li>
+          <li>Offline-first storage, SharedPreferences</li>
+          <li>Arabic RTL layouts, animations, forms</li>
+          <li>Web/PWA, responsive UI</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h5>Embedded</h5>
+        <ul>
+          <li>C, Embedded C</li>
+          <li>PIC (CCS C), AVR/ATmega, Arduino</li>
+          <li>UART/USART, USB HID</li>
+          <li>GPIO, interrupts, timers, PWM</li>
+          <li>Sensor integration, motor drivers</li>
+          <li>Real-time control</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h5>Tools &amp; workflow</h5>
+        <ul>
+          <li>Git &amp; GitHub, pull requests, code reviews</li>
+          <li>App signing, versioning, Play Store release</li>
+          <li>Google Apps Script, Cloudinary</li>
+          <li>C++, OOP, data structures</li>
+          <li>HTML, CSS</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <h3 class="section-title"><span class="num">04.</span> Get in touch</h3>
+    <p class="contact-line">I'm open to junior Flutter and embedded roles, remote or on-site. If my work fits what you're building, let's talk.</p>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:nadi.nasser.m@gmail.com">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        nadi.nasser.m@gmail.com
+      </a>
+      <a class="btn btn-ghost" href="https://wa.me/201279187774" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        WhatsApp · +20 127 918 7774
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/NadiNasserMass3od" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/nadi-nasser-2b9a22204" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Built with plain HTML, CSS and a pinch of JavaScript. © 2026 Nadi Nasser</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
