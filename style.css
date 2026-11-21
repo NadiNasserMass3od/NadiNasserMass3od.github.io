@@ -100,7 +100,7 @@ a { color: var(--accent); text-decoration: none; }
   overflow: hidden;
   background:
     linear-gradient(rgba(10, 17, 32, 0.86), rgba(10, 17, 32, 0.94)),
-    url("images/cover.jpg") center 30% / cover no-repeat;
+    url("cover.jpg") center 30% / cover no-repeat;
 }
 
 .hero-inner { max-width: 620px; }
