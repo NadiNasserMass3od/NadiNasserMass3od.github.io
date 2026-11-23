@@ -379,23 +379,6 @@
       .role-box .no b { color: #dc2626; }
       @media (prefers-color-scheme: dark) { .role-box .no b { color: #f87171; } }
 
-      /* ---------- Mostaql ready-to-copy section ---------- */
-      .mostaql-box {
-        background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
-        padding: clamp(22px, 4vw, 36px); box-shadow: var(--shadow-sm);
-      }
-      .mostaql-copy {
-        direction: rtl; text-align: right;
-        background: var(--surface-2); border: 1px solid var(--line); border-radius: 14px;
-        padding: clamp(20px, 3.5vw, 30px);
-        font-size: 16.5px; line-height: 1.95; color: var(--ink-2);
-        white-space: pre-wrap; word-break: break-word;
-      }
-      .mostaql-copy strong { color: var(--ink); }
-      .mostaql-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; direction: rtl; }
-      .mostaql-note { direction: rtl; text-align: right; color: var(--muted); font-size: 15px; line-height: 1.8; margin: 16px 0 0; }
-      .mostaql-note strong { color: var(--ink); }
-
       /* ---------- contact ---------- */
       .contact-box {
         background: var(--surface); border: 1px solid var(--line); border-radius: 22px;
@@ -520,8 +503,6 @@
 
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
-        *, *::before, *::after { animation-duration: .001s !important; animation-iteration-count: 1 !important; transition-duration: .001s !important; }
-        .marquee { animation: none; flex-wrap: wrap; width: auto; }
       }
     </style>
   </head>
@@ -585,7 +566,7 @@
       <div class="marquee-band" aria-hidden="true">
         <div class="marquee" id="marquee">
           <ul>
-            <li>Flutter</li><li>Dart</li><li>Bloc / Cubit</li><li>Firebase</li><li>REST APIs · Dio</li><li>Embedded C</li><li>PIC18F4550</li><li>AVR / ATmega</li><li>UART · USB HID</li><li>PWM &amp; Timers</li><li>Google Play Release</li><li>PWA</li><li>Git &amp; GitHub</li><li>Arabic RTL</li>
+            <li>Flutter</li><li>Dart</li><li>Bloc / Cubit</li><li>Firebase</li><li>REST APIs · Dio</li><li>Embedded C</li><li>PIC18F4550</li><li>AVR / ATmega</li><li>UART · USB HID</li><li>PWM &amp; Timers</li><li>Google Play Release</li><li>Git &amp; GitHub</li><li>Arabic RTL</li>
           </ul>
         </div>
       </div>
@@ -625,7 +606,7 @@
             <article class="tl-item reveal" data-delay="2">
               <span class="yr">Now</span>
               <h3>Shipping &amp; keeping real apps live</h3>
-              <p>Hesabaty — my own code — live on Google Play, and the church services PWA I conceived and delivered, kept live in production with real user feedback.</p>
+              <p>Hesabaty — my own code — live on Google Play, and the church services web app I conceived and delivered, kept live in production with real user feedback.</p>
             </article>
           </div>
         </div>
@@ -684,9 +665,9 @@
                 </svg>
               </div>
               <div class="card-body">
-                <span class="card-cat">Product &amp; Delivery · Web PWA</span>
+                <span class="card-cat">Product &amp; Delivery · Web App</span>
                 <h3>Church Services Schedule</h3>
-                <p>An installable Arabic RTL web app (PWA) that shows the services and activities of three churches — Virgin Mary, Archangel Raphael, and St John the Beloved — in one daily timetable (6 AM–6 PM), with filters by church and date, a searchable activities list, a services directory, dark mode, and activity adding for authorised users. It is used daily by the three churches.</p>
+                <p>An installable Arabic RTL web app that shows the services and activities of three churches — Virgin Mary, Archangel Raphael, and St John the Beloved — in one daily timetable (6 AM–6 PM), with filters by church and date, a searchable activities list, a services directory, dark mode, and activity adding for authorised users. It is used daily by the three churches.</p>
                 <p><strong>My role in this project was product and delivery — not code.</strong> I came up with the idea and defined the requirements, then reviewed the AI-generated build in detail: I went through the screens and the behaviour, checked usage and consumption, spotted problems, and fixed them together with the AI until the app worked the way the churches needed. I also researched and chose how it would run live on the web — a PostgreSQL database on Neon, a serverless backend, and hosting on Cloudflare Pages — and got it launched and kept it running.</p>
                 <div class="role-box" aria-label="My exact role in this project">
                   <h4>My exact role — stated plainly</h4>
@@ -835,7 +816,7 @@
                 <li>Firebase Auth, Cloud Firestore</li>
                 <li>Offline-first storage, SharedPreferences</li>
                 <li>Arabic RTL layouts, animations, forms</li>
-                <li>Web / PWA, responsive UI</li>
+                <li>Flutter Web, responsive UI</li>
               </ul>
             </article>
             <article class="skill-card amber reveal" data-delay="1">
@@ -869,55 +850,16 @@
         </div>
       </section>
 
-      <!-- ================= MOSTAQL (ready-to-copy Arabic profile) ================= -->
+      <!-- ================= MOSTAQL ================= -->
       <section id="mostaql">
         <div class="wrap">
-          <div class="sec-head reveal"><span class="sec-num">04.</span><h2>Mostaql profile — ready to copy</h2><span class="rule"></span></div>
-          <p class="sec-sub reveal">The complete, updated Arabic bio for my Mostaql freelance profile — written to describe exactly what I can deliver, with no exaggeration. Copy it as-is:</p>
-          <div class="mostaql-box reveal">
-            <div class="mostaql-copy" id="mostaqlText">مطوّر تطبيقات Flutter — أبني تطبيقات موبايل عملية وجاهزة للنشر
-
-أنا نادي ناصر، مهندس كهرباء ومطوّر تطبيقات Flutter (مستوى Junior)، وخبرتي مبنية على تنفيذ مشاريع عملية كاملة بنفسي — من الفكرة، إلى كتابة الكود، إلى النشر والمتابعة — وليست على وظائف سابقة أو عملاء سابقين، وأذكر ذلك بوضوح حتى تكون الصورة دقيقة من البداية.
-
-أبرز أعمالي:
-• تطبيق «حساباتي»: تطبيق لإدارة الدخل والمصروفات والميزانية باللغة العربية، يعمل بدون إنترنت، ومنشور فعليًا على Google Play، وتولّيت فيه كل مراحل الإطلاق: الإعداد والتوقيع وإدارة الإصدارات والنشر على المتجر.
-• تطبيق NadFly: تطبيق تواصل اجتماعي باستخدام Flutter وFirebase، يشمل تسجيل الدخول وإنشاء الحسابات، ونشر المنشورات النصية والمصوّرة، والإعجاب والتعليقات، والملفات الشخصية ونظام المتابعة، والبحث عن المستخدمين.
-• تطبيق الطقس: عرض حالة الطقس الحالية وتوقعات 3 أيام لأي مدينة حول العالم باستخدام WeatherAPI، مع إدارة الحالة باستخدام Bloc/Cubit والتعامل مع حالات التحميل والنجاح والخطأ.
-• تطبيق إدارة المهام: تطبيق لتنظيم المهام اليومية وتصنيفها وتحديد أولوياتها، يستخدم Google Sheets كقاعدة بيانات عبر Google Apps Script، بدون خادم تقليدي.
-• ومشاريع عملية أخرى متاحة على GitHub للاطلاع على الكود، منها: السبحة الذكية لعدّ الأذكار وتتبّع الأهداف، وحاسبة BMI Plus لقياس مؤشر كتلة الجسم، وواجهة تسجيل دخول متحركة مع التحقق من البيانات والحفظ المحلي.
-
-ما أستطيع تقديمه لك:
-• بناء تطبيق Flutter جديد من الصفر لنظام Android — وقابل للبناء للويب كتطبيق PWA — انطلاقًا من فكرتك أو تصميمك.
-• تحويل التصميمات إلى واجهات Flutter متجاوبة مع مقاسات الشاشات المختلفة، مع دعم كامل للغة العربية واتجاه الكتابة من اليمين لليسار (RTL).
-• ربط التطبيق بخدمات وواجهات برمجية خارجية (REST APIs) باستخدام Dio، مع التعامل السليم مع حالات التحميل والنجاح والخطأ.
-• بناء أنظمة تسجيل الدخول وقواعد البيانات باستخدام Firebase (المصادقة Authentication وقاعدة بيانات Firestore)، ورفع الصور وتخزينها عبر Cloudinary.
-• إدارة حالة التطبيق باستخدام Bloc/Cubit أو Provider، حسب طبيعة المشروع وحجمه.
-• التخزين المحلي على الجهاز والعمل بدون إنترنت (Offline) باستخدام SharedPreferences والحلول المحلية المناسبة.
-• ربط التطبيقات بـ Google Sheets كقاعدة بيانات بسيطة وخفيفة بدون خادم، عند الحاجة إلى حل سريع ومنخفض التكلفة.
-• إصلاح الأخطاء في تطبيقات Flutter القائمة، وتحسين واجهاتها وتجربة استخدامها، وإعداد التطبيق وتهيئته للنشر على Google Play.
-
-مهاراتي التقنية:
-Flutter وDart — إدارة الحالة بـ Bloc/Cubit وProvider — التعامل مع REST APIs باستخدام Dio — Firebase Auth وCloud Firestore — التخزين المحلي — Google Sheets وGoogle Apps Script — تطوير Flutter Web وتطبيقات PWA — Git وGitHub — بناء واجهات عربية باتجاه RTL.
-
-أسلوب عملي:
-أبدأ بفهم المطلوب بدقة قبل كتابة أي كود، وأقسّم العمل إلى مراحل واضحة، وأطلعك على التقدم أولًا بأول، وأسلّم كودًا منظمًا تستطيع أنت — أو أي مطوّر آخر بعدي — البناء عليه وتطويره. أستخدم أدوات الذكاء الاصطناعي كمساعد في عملي، لكن كل ما أسلّمه أكون قد راجعته وفهمته واختبرته بنفسي، وأتحمل مسؤوليته كاملة.
-
-ملحوظة عن التوفر:
-أنا حاليًا أؤدي الخدمة العسكرية، ومتاح للوظائف بدوام كامل اعتبارًا من 1 يونيو 2027. أما مشاريع العمل الحر، فنتفق على نطاق العمل والجدول الزمني بوضوح قبل البدء، بما يناسب حجم المشروع، ولا ألتزم بموعد لا أستطيع الوفاء به.
-
-إذا كانت لديك فكرة تطبيق، أو مشروع قائم يحتاج إلى تطوير أو إصلاح، أرسل لي التفاصيل، وسأرد عليك بتقييم واقعي لما يمكن تنفيذه والوقت الذي يحتاجه — بدون مبالغة، وبدون وعود لا أستطيع تنفيذها.</div>
-            <div class="mostaql-actions">
-              <button type="button" class="contact-btn primary" id="copyMostaqlBtn" style="flex:0 1 auto">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                <span class="copy-mostaql-label">انسخ النبذة كاملة</span>
-              </button>
-              <a class="contact-btn outline" href="https://mostaql.com/u/NadiNasser" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
-                افتح حسابي على مستقل
-              </a>
-            </div>
-            <span id="copyMostaqlStatus" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"></span>
-            <p class="mostaql-note"><strong>ملحوظة مقصودة:</strong> مشروع جدولة خدمات الكنائس غير مدرج في هذه النبذة ولا في معرض أعمالي على مستقل — لأنه مشروع كنسي لا يخاطب عملاء مستقل، ولأن دوري فيه كان الفكرة والمتطلبات ومراجعة عمل الذكاء الاصطناعي واختيار البنية التحتية والتشغيل، وليس كتابة الكود. مكانه الصحيح هو هذا البورتفليو فقط، موصوفًا بدوري الحقيقي فيه كما في بطاقة المشروع أعلاه.</p>
+          <div class="sec-head reveal"><span class="sec-num">04.</span><h2>Mostaql</h2><span class="rule"></span></div>
+          <p class="sec-sub reveal">For freelance Flutter work, you can hire me through my Mostaql profile:</p>
+          <div class="reveal">
+            <a class="contact-btn outline" href="https://mostaql.com/u/NadiNasser" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              افتح حسابي على مستقل
+            </a>
           </div>
         </div>
       </section>
@@ -990,11 +932,11 @@ Flutter وDart — إدارة الحالة بـ Bloc/Cubit وProvider — الت
 
             <p class="cv-label">Download my CV — both updated to match the honest framing on this page, including my exact role in the church services project and availability from 1 June 2027</p>
             <div class="cv-row">
-              <a class="cv-btn" href="https://nadinassermass3od.github.io/nadi-nasser-flutter-cv.pdf" target="_blank" rel="noopener">
+              <a class="cv-btn" href="pdfs/nadi-nasser-flutter-cv.pdf" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
                 Flutter CV (PDF)
               </a>
-              <a class="cv-btn amber" href="https://nadinassermass3od.github.io/nadi-nasser-embedded-cv.pdf" target="_blank" rel="noopener">
+              <a class="cv-btn amber" href="pdfs/nadi-nasser-embedded-cv.pdf" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
                 Embedded CV (PDF)
               </a>
@@ -1027,7 +969,11 @@ Flutter وDart — إدارة الحالة بـ Bloc/Cubit وProvider — الت
     <script>
       (function () {
         "use strict";
-        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        /* The page's ambient motion (typing rotator, marquee, reveal,
+           counters, animated card icons) is intentional and always on —
+           it is not gated on the OS reduced-motion setting, which was
+           freezing every animation on some phones. */
+        var reduced = false;
 
         /* ---------- typing rotator ---------- */
         var phrases = [
@@ -1181,36 +1127,6 @@ Flutter وDart — إدارة الحالة بـ Bloc/Cubit وProvider — الت
             if (navigator.clipboard && navigator.clipboard.writeText) {
               navigator.clipboard.writeText(email).then(showCopied).catch(function () { fallbackCopy(email); });
             } else { fallbackCopy(email); }
-          });
-        }
-
-        /* ---------- copy Mostaql bio ---------- */
-        var mostaqlBtn = document.getElementById("copyMostaqlBtn");
-        if (mostaqlBtn) {
-          var mostaqlLabel = mostaqlBtn.querySelector(".copy-mostaql-label");
-          var mostaqlStatus = document.getElementById("copyMostaqlStatus");
-          var mostaqlTimer = null;
-          function showMostaqlCopied() {
-            if (mostaqlLabel) mostaqlLabel.textContent = "تم النسخ ✓";
-            if (mostaqlStatus) mostaqlStatus.textContent = "تم نسخ نبذة مستقل كاملة";
-            clearTimeout(mostaqlTimer);
-            mostaqlTimer = setTimeout(function () {
-              if (mostaqlLabel) mostaqlLabel.textContent = "انسخ النبذة كاملة";
-              if (mostaqlStatus) mostaqlStatus.textContent = "";
-            }, 2200);
-          }
-          mostaqlBtn.addEventListener("click", function () {
-            var src = document.getElementById("mostaqlText");
-            var text = src ? (src.innerText || src.textContent || "") : "";
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-              navigator.clipboard.writeText(text).then(showMostaqlCopied).catch(function () {
-                var ta = document.createElement("textarea");
-                ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "absolute"; ta.style.left = "-9999px";
-                document.body.appendChild(ta); ta.select();
-                try { document.execCommand("copy"); showMostaqlCopied(); } catch (e) {}
-                document.body.removeChild(ta);
-              });
-            }
           });
         }
 
