@@ -380,8 +380,81 @@
         background: linear-gradient(90deg, var(--accent) 0 55%, var(--amber-bright) 55% 100%);
       }
       .contact-box h2 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; letter-spacing: -0.7px; margin-bottom: 12px; }
-      .contact-box p { color: var(--muted); max-width: 560px; margin: 0 auto 30px; font-size: 17px; }
-      .contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 22px; }
+      .contact-box .contact-intro { color: var(--muted); max-width: 560px; margin: 0 auto 14px; font-size: 17px; }
+      .contact-box .contact-note { color: var(--muted); font-size: 14px; margin: 0; max-width: none; }
+      .contact-box .contact-direct { color: var(--muted); }
+      .contact-box .cv-label { color: var(--muted); }
+      .contact-status {
+        display: inline-flex; align-items: center; gap: 9px;
+        border: 1px solid var(--line-strong); background: var(--surface-2);
+        border-radius: 999px; padding: 7px 14px 7px 10px; font-size: 13.5px; font-weight: 700; color: var(--ink-2);
+        margin: 6px auto 28px;
+      }
+      .contact-status .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); flex: none; position: relative; }
+      .contact-status .dot::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 1.5px solid var(--green); opacity: .55; animation: pulse 2s ease-out infinite; }
+      .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; text-align: left; margin-bottom: 18px; }
+      @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+      .contact-card {
+        background: var(--surface-2); border: 1px solid var(--line); border-radius: 16px;
+        padding: 20px; display: flex; flex-direction: column; gap: 6px;
+        transition: border-color .2s, box-shadow .2s, transform .2s;
+      }
+      .contact-card:hover { border-color: var(--line-strong); box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+      .contact-card.featured { border-color: rgba(2,119,189,.35); background: linear-gradient(180deg, rgba(2,136,209,.06), transparent 55%), var(--surface-2); }
+      @media (prefers-color-scheme: dark) { .contact-card.featured { border-color: rgba(56,182,246,.35); } }
+      .contact-card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+      .contact-icon { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; flex: none; }
+      .contact-icon svg { width: 20px; height: 20px; }
+      .contact-icon.email { background: rgba(2,136,209,.12); color: var(--accent); }
+      .contact-icon.whatsapp { background: rgba(21,128,61,.12); color: var(--green); }
+      .contact-icon.linkedin { background: rgba(2,119,189,.12); color: var(--accent); }
+      .contact-tag { font-size: 11.5px; font-weight: 800; letter-spacing: .4px; text-transform: uppercase; color: var(--green); background: rgba(21,128,61,.10); border: 1px solid rgba(21,128,61,.22); padding: 4px 8px; border-radius: 999px; white-space: nowrap; }
+      .contact-label { font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase; color: var(--muted); }
+      .contact-value { font-weight: 800; font-size: 16.5px; color: var(--ink); line-height: 1.35; word-break: break-word; }
+      .contact-value.mono { font-family: "JetBrains Mono", monospace; font-size: 14.5px; font-weight: 600; letter-spacing: -0.2px; }
+      .contact-note { color: var(--muted); font-size: 14px; line-height: 1.5; margin: 0; flex: 1; }
+      .contact-card-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+      .contact-btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+        min-height: 44px; padding: 10px 16px; border-radius: 9px;
+        font-weight: 700; font-size: 14.5px; text-decoration: none; cursor: pointer; font-family: inherit;
+        border: 1px solid transparent; transition: all .2s; flex: 1; white-space: nowrap;
+      }
+      .contact-btn svg { width: 16px; height: 16px; flex: none; }
+      .contact-btn.primary { background: var(--accent); color: var(--accent-ink); }
+      .contact-btn.primary:hover { background: var(--accent-bright); }
+      .contact-btn.green { background: #15803d; color: #fff; }
+      .contact-btn.green:hover { background: #16a34a; }
+      .contact-btn.outline { background: var(--surface); color: var(--ink); border-color: var(--line-strong); flex: 0 1 auto; }
+      .contact-btn.outline:hover { border-color: var(--accent); color: var(--accent); }
+      .contact-btn.copied { background: var(--green); border-color: var(--green); color: #fff; }
+      .contact-direct { margin: 6px auto 26px; max-width: 520px; display: flex; flex-direction: column; gap: 12px; }
+      .contact-direct .direct-intro { margin: 0; text-align: center; color: var(--muted); font-size: 14px; font-weight: 600; line-height: 1.5; }
+      .direct-rows { display: flex; flex-direction: column; gap: 10px; }
+      .direct-row {
+        display: flex; align-items: center; gap: 13px; text-align: left;
+        background: var(--surface-2); border: 1px solid var(--line); border-radius: 14px;
+        padding: 12px 16px; text-decoration: none;
+        transition: border-color .2s, transform .2s, box-shadow .2s;
+      }
+      .direct-row:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); transform: translateY(-1px); }
+      .direct-icon {
+        width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; flex: none;
+        background: rgba(2,136,209,.12); color: var(--accent);
+      }
+      .direct-icon.whatsapp { background: rgba(21,128,61,.12); color: var(--green); }
+      .direct-icon svg { width: 18px; height: 18px; }
+      .direct-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+      .direct-label { font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase; color: var(--muted); line-height: 1.3; }
+      .direct-value { font-weight: 700; font-size: 15.5px; color: var(--ink); line-height: 1.35; white-space: nowrap; }
+      .direct-value.mono { font-family: "JetBrains Mono", monospace; font-size: 14px; font-weight: 600; letter-spacing: -0.3px; }
+      .direct-row:hover .direct-value { color: var(--accent); }
+      @media (max-width: 420px) {
+        .direct-row { padding: 11px 13px; gap: 11px; }
+        .direct-value { font-size: 15px; }
+        .direct-value.mono { font-size: 13px; }
+      }
+      .cv-label { font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase; color: var(--muted); margin: 6px 0 12px; }
       .cv-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
       .cv-btn {
         display: inline-flex; align-items: center; gap: 9px; min-height: 48px; padding: 11px 20px;
@@ -765,21 +838,67 @@
           <div class="sec-head reveal"><span class="sec-num">04.</span><h2>Get in touch</h2><span class="rule"></span></div>
           <div class="contact-box reveal">
             <h2>Let's build something real.</h2>
-            <p>I'm open to junior Flutter and embedded roles, remote or on-site. If my work fits what you're building, let's talk.</p>
-            <div class="contact-actions">
-              <a class="btn btn-primary" href="mailto:nadi.nasser.m@gmail.com">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
-                nadi.nasser.m@gmail.com
-              </a>
-              <a class="btn btn-ghost" href="https://wa.me/201279187774" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg>
-                WhatsApp
-              </a>
-              <a class="btn btn-ghost" href="https://www.linkedin.com/in/nadi-nasser-a3428530a" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.22 8.1h4.56V23H.22V8.1ZM8.34 8.1h4.37v2.04h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 7v8.23h-4.55v-7.3c0-1.74-.03-3.98-2.43-3.98-2.43 0-2.8 1.9-2.8 3.86V23H8.34V8.1Z"/></svg>
-                LinkedIn
-              </a>
+            <p class="contact-intro">I'm open to junior Flutter and embedded roles, remote or on-site. If my work fits what you're building, reach me directly — no form, no middleman.</p>
+            <div><span class="contact-status"><span class="dot" aria-hidden="true"></span> Based in Assiut, Egypt · Available for remote &amp; on-site roles</span></div>
+
+            <div class="contact-grid">
+              <!-- Email -->
+              <article class="contact-card featured">
+                <div class="contact-card-top">
+                  <span class="contact-icon email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></span>
+                </div>
+                <span class="contact-label">Email</span>
+                <span class="contact-value mono">nadi.nasser.m@gmail.com</span>
+                <p class="contact-note">Best for job opportunities, CV requests and project details.</p>
+                <div class="contact-card-actions">
+                  <a class="contact-btn primary" href="mailto:nadi.nasser.m@gmail.com?subject=Hello%20Nadi%20%E2%80%94%20from%20your%20portfolio">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg>
+                    Send email
+                  </a>
+                  <button type="button" class="contact-btn outline" id="copyEmailBtn" data-email="nadi.nasser.m@gmail.com" aria-label="Copy email address">
+                    <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M20 6 9 17l-5-5"/></svg>
+                    <span class="copy-label">Copy</span>
+                  </button>
+                </div>
+                <span id="copyStatus" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"></span>
+              </article>
+
+              <!-- WhatsApp -->
+              <article class="contact-card">
+                <div class="contact-card-top">
+                  <span class="contact-icon whatsapp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35ZM12.04 2C6.56 2 2.1 6.45 2.1 11.93c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.48 0 9.94-4.45 9.94-9.93 0-2.65-1.03-5.14-2.9-7.01A9.83 9.83 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Z"/></svg></span>
+                  <span class="contact-tag">Fastest reply</span>
+                </div>
+                <span class="contact-label">WhatsApp</span>
+                <span class="contact-value" dir="ltr">+20 127 918 7774</span>
+                <p class="contact-note">Fastest way to reach me — tap below to start a chat right away.</p>
+                <div class="contact-card-actions">
+                  <a class="contact-btn green" href="https://wa.me/201279187774?text=Hi%20Nadi%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk." target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+                    Chat on WhatsApp
+                  </a>
+                </div>
+              </article>
+
+              <!-- LinkedIn -->
+              <article class="contact-card">
+                <div class="contact-card-top">
+                  <span class="contact-icon linkedin"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.22 8.1h4.56V23H.22V8.1ZM8.34 8.1h4.37v2.04h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 7v8.23h-4.55v-7.3c0-1.74-.03-3.98-2.43-3.98-2.43 0-2.8 1.9-2.8 3.86V23H8.34V8.1Z"/></svg></span>
+                </div>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">Nadi Nasser</span>
+                <p class="contact-note">Connect with me on LinkedIn for my full profile and experience.</p>
+                <div class="contact-card-actions">
+                  <a class="contact-btn outline" style="flex:1" href="https://www.linkedin.com/in/nadi-nasser-a3428530a" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+                    View LinkedIn profile
+                  </a>
+                </div>
+              </article>
             </div>
+
+            <p class="cv-label">Download my CV</p>
             <div class="cv-row">
               <a class="cv-btn" href="https://nadinassermass3od.github.io/nadi-nasser-flutter-cv.pdf" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
@@ -936,6 +1055,44 @@
             });
           });
         });
+
+        /* ---------- copy email ---------- */
+        var copyBtn = document.getElementById("copyEmailBtn");
+        if (copyBtn) {
+          var copyLabel = copyBtn.querySelector(".copy-label");
+          var iconCopy = copyBtn.querySelector(".icon-copy");
+          var iconCheck = copyBtn.querySelector(".icon-check");
+          var copyStatus = document.getElementById("copyStatus");
+          var copyTimer = null;
+          function showCopied() {
+            copyBtn.classList.add("copied");
+            if (copyLabel) copyLabel.textContent = "Copied!";
+            if (iconCopy) iconCopy.style.display = "none";
+            if (iconCheck) iconCheck.style.display = "";
+            if (copyStatus) copyStatus.textContent = "Email address copied";
+            clearTimeout(copyTimer);
+            copyTimer = setTimeout(function () {
+              copyBtn.classList.remove("copied");
+              if (copyLabel) copyLabel.textContent = "Copy";
+              if (iconCopy) iconCopy.style.display = "";
+              if (iconCheck) iconCheck.style.display = "none";
+              if (copyStatus) copyStatus.textContent = "";
+            }, 2200);
+          }
+          function fallbackCopy(text) {
+            var ta = document.createElement("textarea");
+            ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "absolute"; ta.style.left = "-9999px";
+            document.body.appendChild(ta); ta.select();
+            try { document.execCommand("copy"); showCopied(); } catch (e) { if (copyStatus) copyStatus.textContent = "Copy failed — email is nadi.nasser.m@gmail.com"; }
+            document.body.removeChild(ta);
+          }
+          copyBtn.addEventListener("click", function () {
+            var email = copyBtn.getAttribute("data-email") || "nadi.nasser.m@gmail.com";
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(email).then(showCopied).catch(function () { fallbackCopy(email); });
+            } else { fallbackCopy(email); }
+          });
+        }
 
         /* ---------- scroll progress + scrollspy ---------- */
         var progress = document.getElementById("progress");
