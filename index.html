@@ -317,6 +317,7 @@
       .card-cat.embed { color: var(--amber); }
       .card-body h3 { font-size: 20.5px; font-weight: 700; letter-spacing: -0.3px; }
       .card-body p { margin: 0; color: var(--muted); font-size: 15.5px; line-height: 1.6; flex: 1; }
+      .card.roomy .card-body p { line-height: 2; }
       .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
       .tags li { list-style: none; }
       .tags { margin: 4px 0 0; padding: 0; }
@@ -378,6 +379,11 @@
       .role-box .yes b { color: var(--green); }
       .role-box .no b { color: #dc2626; }
       @media (prefers-color-scheme: dark) { .role-box .no b { color: #f87171; } }
+      .role-details summary { cursor: pointer; font-size: 14.5px; font-weight: 700; color: var(--accent); list-style: none; }
+      .role-details summary::-webkit-details-marker { display: none; }
+      .role-details summary::before { content: "▸ "; }
+      .role-details[open ] summary::before { content: "▾ "; }
+      .role-details > p { margin-top: 10px; }
 
       /* ---------- contact ---------- */
       .contact-box {
@@ -626,7 +632,7 @@
 
           <div class="proj-grid" id="projGrid">
             <!-- Hesabaty -->
-            <article class="card reveal" data-cat="flutter">
+            <article class="card reveal roomy" data-cat="flutter">
               <div class="card-visual cv-flutter">
                 <span class="badge"><span class="dot"></span>Live on Google Play</span>
                 <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
@@ -667,16 +673,20 @@
               <div class="card-body">
                 <span class="card-cat">Product &amp; Delivery · Web App</span>
                 <h3>Church Services Schedule</h3>
-                <p>An installable Arabic RTL web app that shows the services and activities of three churches — Virgin Mary, Archangel Raphael, and St John the Beloved — in one daily timetable (6 AM–6 PM), with filters by church and date, a searchable activities list, a services directory, dark mode, and activity adding for authorised users. It is used daily by the three churches.</p>
-                <p><strong>My role in this project was product and delivery — not code.</strong> I came up with the idea and defined the requirements, then reviewed the AI-generated build in detail: I went through the screens and the behaviour, checked usage and consumption, spotted problems, and fixed them together with the AI until the app worked the way the churches needed. I also researched and chose how it would run live on the web — a PostgreSQL database on Neon, a serverless backend, and hosting on Cloudflare Pages — and got it launched and kept it running.</p>
-                <div class="role-box" aria-label="My exact role in this project">
-                  <h4>My exact role — stated plainly</h4>
-                  <ul>
-                    <li class="yes"><b>What I did:</b><span>Idea and requirements · reviewing and testing the AI's work · fixing issues together with it · monitoring usage · researching and selecting the database, backend and hosting so the app runs live</span></li>
-                    <li class="no"><b>What I did not do:</b><span>Write the app's code — and I do not claim database or backend development skills from this project; that is not an area I understand as a developer</span></li>
-                  </ul>
-                </div>
-                <ul class="tags"><li class="tag">Idea &amp; requirements</li><li class="tag">AI-assisted build — reviewed by me</li><li class="tag">Neon · Serverless · Cloudflare Pages</li><li class="tag">Live · 3 churches</li></ul>
+                <p>An Arabic RTL web app showing the services and activities of three churches in one daily timetable, with filters by church and date, a searchable activities list, and a services directory. It is used daily by the three churches.</p>
+                <p><strong>My role in this project was product and delivery — not code.</strong></p>
+                <details class="role-details">
+                  <summary>My exact role — read the details</summary>
+                  <p>I went through the screens and the behaviour, checked usage and consumption, spotted problems, and fixed them together with the AI until the app worked the way the churches needed — and got it launched and kept it running. I also researched and chose how it runs live on the web: a PostgreSQL database on Neon, a serverless backend, and hosting on Cloudflare Pages.</p>
+                  <div class="role-box" aria-label="My exact role in this project">
+                    <h4>My exact role — stated plainly</h4>
+                    <ul>
+                      <li class="yes"><b>What I did:</b><span>Idea and requirements · reviewing and testing the AI's work · fixing issues together with it · monitoring usage · researching and selecting the database, backend and hosting so the app runs live</span></li>
+                      <li class="no"><b>What I did not do:</b><span>Write the app's code — and I do not claim database or backend development skills from this project; that is not an area I understand as a developer</span></li>
+                    </ul>
+                  </div>
+                </details>
+                <ul class="tags"><li class="tag">Idea &amp; requirements</li><li class="tag">AI-assisted build</li><li class="tag">Neon · Serverless</li></ul>
                 <div class="card-links">
                   <a class="solid" href="https://archangel-raphael.pages.dev" target="_blank" rel="noopener">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
